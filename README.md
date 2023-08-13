@@ -1,4 +1,4 @@
-# Customer-Segmentation-using-Cohort-Analysis-RFM-KMeans
+# E-Commerce : Customer-Segmentation-using-Cohort-Analysis-RFM-KMeans
 
 ### Content
 "This is a transnational data set which contains all the transactions occurring for a UK-based and registered non-store online retail.The company mainly sells unique all-occasion gifts. Many customers of the company are wholesalers."
@@ -8,6 +8,9 @@ Per the UCI Machine Learning Repository, this data was made available by Dr Daqi
 ### Solution
 Here, I performed an analysis and created a Dashboard using Tableau to display the results of the total sales data for each country with the months for each time of the day, for example morning and evening periods, and so on from the billing time, and compared the profits against the transactions. also I create a dashboard for the top 5 countries, the top 10 clients, and the top ten descriptions.
 
+![Screenshot 2023-06-08 205842](https://github.com/Muhannad0101/Customer-Segmentation-using-Cohort-Analysis-RFM-KMeans/assets/102443619/19318e17-a3f8-42ee-9efb-d1accb83edd1)
+
+![Screenshot 2023-06-08 205930](https://github.com/Muhannad0101/Customer-Segmentation-using-Cohort-Analysis-RFM-KMeans/assets/102443619/9ca02ad2-caa2-44d1-a15d-9b69d838b765)
 
 - Cohort Analysis:
 The result is a cohort analysis heatmap that shows the retention rates of customers over time. The data is organized into cohorts based on the month in which a customer made their first purchase.
