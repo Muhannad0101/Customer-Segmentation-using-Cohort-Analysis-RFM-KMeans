@@ -13,6 +13,7 @@ Here, I performed an analysis and created a Dashboard using Tableau to display t
 ![Screenshot 2023-06-08 205930](https://github.com/Muhannad0101/Customer-Segmentation-using-Cohort-Analysis-RFM-KMeans/assets/102443619/9ca02ad2-caa2-44d1-a15d-9b69d838b765)
 
 - Cohort Analysis:
+
 1- Cohort Month: On the vertical axis, we have different cohorts grouped by months, ranging from 2010-12 to 2011-12. Each cohort represents users who started their relationship with a company or service in that month.
 
 2- Cohort Index: On the horizontal axis, we have the Cohort Index, representing the number of months since the starting month. A Cohort Index of 1 is the month the cohort started, 2 is the subsequent month, and so on.
@@ -35,6 +36,7 @@ The chart allows businesses to understand user behavior and longevity over time,
 
 
 - RFM (Recency, Frequency, Monetary)
+
 1- CustomerID: This is a unique identification number for each customer. It allows the business to differentiate between individual customers.
 
 2- Recency: This typically refers to the number of days since the last transaction or interaction a customer had with the business. A lower number suggests that the customer has interacted with the business more recently. For example, a recency of 9 for CustomerID 12349.0 means that this customer had their last transaction or interaction with the business 9 days ago.
@@ -59,6 +61,7 @@ CustomerID 12350.0 hasn't transacted in a while (301 days ago), had only 1 trans
 
 
 - Customer lifetime value (CLV)
+
 1- CustomerID: This is a unique identification number for each customer. It allows the business to differentiate between individual customers.
 
 2- CLV (Customer Lifetime Value): This represents the projected net profit attributed to the entire future relationship with a customer. In other words, it's an estimation of how much each customer is worth to the business over the duration of their relationship. The higher the CLV, the more valuable that customer is to the business.
