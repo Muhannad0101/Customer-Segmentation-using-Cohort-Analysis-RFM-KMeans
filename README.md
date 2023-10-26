@@ -55,8 +55,6 @@ CustomerID 12350.0 hasn't transacted in a while (301 days ago), had only 1 trans
 
 ![3](https://github.com/Muhannad0101/Customer-Segmentation-using-Cohort-Analysis-RFM-KMeans/assets/102443619/d59ca8ee-b5fb-4127-ad2a-0405967684ed)
 
-![2](https://github.com/Muhannad0101/Customer-Segmentation-using-Cohort-Analysis-RFM-KMeans/assets/102443619/52e485b4-8f6b-42df-a328-1ca78558e28d)
-
 ![output](https://github.com/Muhannad0101/Customer-Segmentation-using-Cohort-Analysis-RFM-KMeans/assets/102443619/a982fd94-1a93-4ac1-b072-a901fe44f4c9)
 
 
