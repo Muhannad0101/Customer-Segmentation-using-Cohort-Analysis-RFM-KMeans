@@ -13,27 +13,43 @@ Here, I performed an analysis and created a Dashboard using Tableau to display t
 ![Screenshot 2023-06-08 205930](https://github.com/Muhannad0101/Customer-Segmentation-using-Cohort-Analysis-RFM-KMeans/assets/102443619/9ca02ad2-caa2-44d1-a15d-9b69d838b765)
 
 - Cohort Analysis:
-The result is a cohort analysis heatmap that shows the retention rates of customers over time. The data is organized into cohorts based on the month in which a customer made their first purchase.
+1- Cohort Month: On the vertical axis, we have different cohorts grouped by months, ranging from 2010-12 to 2011-12. Each cohort represents users who started their relationship with a company or service in that month.
 
-The columns represent the number of months since the customer's first purchase, and the rows represent the cohort month (i.e., the month in which the cohort made their first purchase).
+2- Cohort Index: On the horizontal axis, we have the Cohort Index, representing the number of months since the starting month. A Cohort Index of 1 is the month the cohort started, 2 is the subsequent month, and so on.
 
-Some cells in the heatmap have missing or NaN values, indicating that there were no customers in the cohort who made a repeat purchase in that particular month.
+3- Retention Rate: The values in the grid show the percentage of the cohort that remains engaged with the company or service over time. A retention rate of 100% for all cohorts in the first month (Cohort Index 1) is expected, as that's the month when the users started. As time progresses (moving rightward on the Cohort Index), the retention rate tends to drop, showing how many of the original users continue to engage or transact with the business.
+
+- Analyzing the chart:
+
+The 2010-12 cohort started with 100% retention (as all cohorts do) and by the 13th month, retained 27% of its original users.
+The 2011-01 cohort had a retention of 15% by its 12th month.
+Later cohorts, such as those from mid-2011 onwards, have fewer data points because they've existed for fewer months relative to the earlier cohorts.
+
+- Key Insights:
+
+The 2010-12 cohort seems to have the best long-term retention, retaining 50% of its users by the 12th month.
+Some cohorts show a slight increase in certain months (e.g., the 2011-02 cohort in month 9 or the 2011-04 cohort in month 6), which could be due to specific marketing campaigns, seasonal effects, or other external factors.
+The chart allows businesses to understand user behavior and longevity over time, enabling them to tailor their marketing and retention strategies effectively.
 
 ![1](https://github.com/Muhannad0101/Customer-Segmentation-using-Cohort-Analysis-RFM-KMeans/assets/102443619/6c6ffa4c-c67f-4830-bf16-6bad6e275fa4)
 
 
 - RFM (Recency, Frequency, Monetary)
-The "Recency" column represents the number of days since the customer's last purchase. Customers with lower recency values are more recently active and engaged with the business.
+1- CustomerID: This is a unique identification number for each customer. It allows the business to differentiate between individual customers.
 
-The "Frequency" column represents the number of purchases made by the customer. Customers with higher frequency values are more engaged and loyal to the business.
+2- Recency: This typically refers to the number of days since the last transaction or interaction a customer had with the business. A lower number suggests that the customer has interacted with the business more recently. For example, a recency of 9 for CustomerID 12349.0 means that this customer had their last transaction or interaction with the business 9 days ago.
 
-The "Monetary" column represents the total amount of money spent by the customer. Customers with higher monetary values are more valuable to the business.
+3- Frequency: This indicates how many times the customer has transacted or interacted with the business during a specific period. In this table, CustomerID 12347.0 has had 7 interactions or transactions.
 
-Negative values in the recency column indicate that the customer made a purchase more recently than the date of the analysis. For example, customer 12347 made a purchase 7 days after the date of the analysis.
+4- Monetary: This represents the total amount of money a customer has spent with the business during a particular period. For instance, CustomerID 12348.0 has spent a total of 1797.24 (likely in a local currency).
 
-The Recency metric has a positive skewness value of 1.2489, indicating that the distribution has a longer tail on the right side and that there are more customers with low recency values (i.e., recently active) than high recency values. The frequency and monetary metrics have even higher positive skewness values of 63.8631 and 55.6776, respectively, indicating that the distributions are highly skewed towards customers with low frequency and monetary values.
+- A quick analysis of the data suggests:
 
-Skewness test results indicate whether the skewness value is different from zero, which would indicate a symmetrical distribution. The p-value in the test result represents the probability of obtaining a skewness statistic as extreme as the one observed, assuming that the null hypothesis of a symmetrical distribution is true. In this case, the p-values for all three RFM metrics are very small, much smaller than the commonly used significance level of 0.05, indicating strong evidence against the null hypothesis and confirming that the distributions are highly skewed.
+CustomerID 12346.0 has not made any transactions recently (316 days ago) and has spent no money despite having 2 interactions or transactions.
+CustomerID 12347.0 transacted very recently (only 7 days ago), had 7 transactions, and spent a total of 431.00.
+CustomerID 12348.0 had their last transaction 66 days ago, had 4 transactions in total, and spent 1797.24.
+CustomerID 12349.0 is also a recent customer with their last transaction 9 days ago. They made 1 transaction and spent 1757.55.
+CustomerID 12350.0 hasn't transacted in a while (301 days ago), had only 1 transaction, and spent 334.40.
 
 ![3](https://github.com/Muhannad0101/Customer-Segmentation-using-Cohort-Analysis-RFM-KMeans/assets/102443619/d59ca8ee-b5fb-4127-ad2a-0405967684ed)
 
@@ -43,8 +59,15 @@ Skewness test results indicate whether the skewness value is different from zero
 
 
 - Customer lifetime value (CLV)
-is a metric that estimates the total amount of money a customer is expected to spend throughout their lifetime as a customer of a business. It is an important metric for because it helps to identify their most valuable customers and inform marketing and retention strategies to encourage these customers to continue making purchases and remain loyal.
+1- CustomerID: This is a unique identification number for each customer. It allows the business to differentiate between individual customers.
 
-For example, customer 17841 has a CLV of 2,976,046 currency units, indicating that they are expected to generate almost 3 million units of revenue for the business throughout their lifetime as a customer. This customer is likely very loyal to the business and makes frequent purchases, contributing to their high CLV value.
+2- CLV (Customer Lifetime Value): This represents the projected net profit attributed to the entire future relationship with a customer. In other words, it's an estimation of how much each customer is worth to the business over the duration of their relationship. The higher the CLV, the more valuable that customer is to the business.
+
+- Quick Analysis:
+
+CustomerID 17841.0 has the highest CLV of 2,976,046.0. This implies that this customer is projected to bring the most net profit to the business over the duration of their relationship compared to the other customers listed.
+CustomerID 14646.0 has the second-highest CLV with 558,978.0.
+CustomerID 18102.0 is close behind with a CLV of 512,877.0.
+The remaining customers have CLVs in descending order, with CustomerID 14911.0 having the lowest CLV among this list at 265,145.0.
 
 ![Screenshot 2023-07-06 195320](https://github.com/Muhannad0101/Customer-Segmentation-using-Cohort-Analysis-RFM-KMeans/assets/102443619/dd698805-7a56-49b5-9fe7-4f93cba4ee3e)
